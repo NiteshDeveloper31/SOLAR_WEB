@@ -4,25 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Industrial Solar Solutions — SolarNova Energy</title>
-    <meta name="description" content="Megawatt-scale 200kW to 5MW+ industrial rooftop &amp; open-access solar power plants for manufacturing plants, textile mills, and chemical factories.">
+    <title>Industrial Solar Power Plants — SolarNova Energy</title>
+    <meta name="description" content="Megawatt-scale 200kW to 10MW+ industrial rooftop &amp; open-access solar power plants for manufacturing plants, textile mills, and chemical complexes.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=5.0">
 </head>
 
 <body>
-    <div class="custom-cursor" id="cursor"></div>
-    <div class="cursor-ring" id="cursor-ring"></div>
     <div id="scroll-progress"></div>
 
+    <div id="preloader">
+        <div class="preloader-sun">
+            <div class="preloader-sun-rays"></div>
+            <div class="preloader-sun-core"></div>
+        </div>
+        <div class="preloader-title">SOLARNOVA</div>
+        <div class="preloader-bar-wrap"><div class="preloader-bar" id="preloader-bar"></div></div>
+    </div>
+
+    <!-- UNIFIED HEADER -->
     <header class="nav-header" id="nav-header">
         <div class="nav-container">
-            <a href="index.html" class="brand-logo">
-                <span class="brand-icon"></span> SOLARNOVA
-            </a>
+            <a href="index.html" class="brand-logo"><span class="brand-icon"></span> SOLARNOVA</a>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
@@ -37,18 +43,21 @@
                 </li>
                 <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
                 <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="case-studies.html" class="nav-link">Case Studies</a></li>
-                <li class="nav-item"><a href="technology.html" class="nav-link">Technology</a></li>
-                <li class="nav-item"><a href="sustainability.html" class="nav-link">Sustainability</a></li>
-                <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="faqs.html" class="nav-link">FAQs</a></li>
-                <li class="nav-item"><a href="testimonials.html" class="nav-link">Reviews</a></li>
+                <li class="nav-item">
+                    <a href="case-studies.html" class="nav-link">Insights &amp; More ▾</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="case-studies.html">📊 ROI Case Studies</a></li>
+                        <li class="dropdown-item"><a href="technology.html">⚙️ R&amp;D Technology</a></li>
+                        <li class="dropdown-item"><a href="sustainability.html">🌱 ESG Sustainability</a></li>
+                        <li class="dropdown-item"><a href="blog.html">📰 Solar News &amp; Blog</a></li>
+                        <li class="dropdown-item"><a href="faqs.html">❓ FAQs &amp; Subsidy Guide</a></li>
+                        <li class="dropdown-item"><a href="testimonials.html">⭐ Client Reviews</a></li>
+                        <li class="dropdown-item"><a href="careers.html">💼 Join Our Team</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
-            <div class="nav-btn-wrap">
-                <a href="contact.html" class="btn-nav">Get Free Audit</a>
-            </div>
+            <div class="nav-btn-wrap"><a href="contact.html" class="btn-nav">Get Free Audit</a></div>
             <div class="hamburger-toggle" id="hamburger"><span></span><span></span><span></span></div>
         </div>
     </header>
@@ -61,13 +70,13 @@
             <li><a href="residential.html">Residential Solar</a></li>
             <li><a href="commercial.html">Commercial Solar</a></li>
             <li><a href="industrial.html" class="active">Industrial Solar</a></li>
-            <li><a href="products.html">Solar Hardware &amp; Products</a></li>
+            <li><a href="products.html">Solar Hardware</a></li>
             <li><a href="projects.html">Projects Portfolio</a></li>
-            <li><a href="case-studies.html">ROI Case Studies</a></li>
-            <li><a href="technology.html">Technology &amp; R&amp;D</a></li>
-            <li><a href="sustainability.html">ESG Sustainability</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="technology.html">Technology</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
             <li><a href="careers.html">Careers</a></li>
-            <li><a href="blog.html">News &amp; Blog</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="faqs.html">FAQs</a></li>
             <li><a href="testimonials.html">Testimonials</a></li>
             <li><a href="contact.html">Contact Us</a></li>
@@ -75,65 +84,102 @@
     </div>
 
     <main class="app-viewport">
-        <section class="section-block" style="padding-top:60px;">
+        <!-- HERO -->
+        <section class="section-block">
             <div class="container">
                 <div class="section-header center gsap-reveal">
-                    <div class="badge-kicker">Megawatt Scale EPC</div>
-                    <h1 class="section-title">Industrial Solar <span class="gold-gradient-text">Power Plants</span></h1>
-                    <p class="section-subtitle">200kW to 5MW+ turnkey solar installations for manufacturing plants, cold storage units, steel foundries, and chemical complexes.</p>
+                    <div class="badge-kicker">Megawatt Scale EPC · 200kW to 10MW+</div>
+                    <h1 class="section-title">Industrial Solar Plants with <span class="highlight-solar-gold">Zero Factory Downtime</span></h1>
+                    <p class="section-subtitle">Electricity consumes up to 35% of industrial manufacturing OPEX. SolarNova engineers non-penetrating metal shed solar arrays and High-Tension (HT) grid interconnections for factories, foundries, and warehouses.</p>
                 </div>
 
-                <div class="grid-2-col" style="margin-top:40px;">
-                    <div class="glass-card gsap-reveal">
-                        <div class="badge-kicker" style="margin-bottom:12px;">Factory Shed &amp; Ground Mount</div>
-                        <h2 style="font-size:1.6rem; color:#fff; margin-bottom:14px;">Zero Production Downtime Guarantee</h2>
-                        <p style="font-size:0.95rem; color:rgba(255,255,255,0.75); line-height:1.65; margin-bottom:20px;">Industrial electricity tariffs consume up to 35% of manufacturing margins. Our modular metal shed mounting structures and dedicated HT (High Tension) transformer synchronization ensure smooth installation without disrupting factory operations.</p>
-                        <a href="contact.html" class="btn-primary">Request Industrial Feasibility Study &rarr;</a>
+                <!-- FEATURE ROW 1 (NON-PENETRATING SHED MOUNT) -->
+                <div class="editorial-row gsap-reveal">
+                    <div class="editorial-media-wrap">
+                        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1200&auto=format&fit=crop" alt="Industrial Metal Shed Solar Array">
                     </div>
+                    <div class="editorial-text-wrap">
+                        <div style="color:#FFC043; font-weight:700; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.12em; margin-bottom:8px;">Engineering Spec 01</div>
+                        <h3>Non-Penetrating Aluminum Seam Clamps</h3>
+                        <p>We deploy specialized non-penetrating aluminum seam clamps for standing seam metal roofing, eliminating any drilling or risk of water leakage during monsoon seasons while carrying 180 km/h cyclone wind certification.</p>
+                        <a href="contact.html" class="btn-primary" style="padding:10px 22px; font-size:0.85rem;">Request Shed Feasibility Audit &rarr;</a>
+                    </div>
+                </div>
 
-                    <div class="glass-card gsap-reveal">
-                        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=800&auto=format&fit=crop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=800&auto=format&fit=crop';" alt="Industrial Solar Installation" style="border-radius:var(--radius-md); width:100%; height:280px; object-fit:cover;">
+                <!-- FEATURE ROW 2 (HT GRID SYNCHRONIZATION) -->
+                <div class="editorial-row reverse gsap-reveal">
+                    <div class="editorial-media-wrap">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop" alt="HT High Tension Grid Sync">
+                    </div>
+                    <div class="editorial-text-wrap">
+                        <div style="color:#FFC043; font-weight:700; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.12em; margin-bottom:8px;">Engineering Spec 02</div>
+                        <h3>High-Tension (11kV / 33kV) Grid Synchronization</h3>
+                        <p>Our electrical engineering team executes seamless HT transformer step-up interconnections, vacuum circuit breaker (VCB) protection panels, and CEIG electrical inspectorate approvals without shutting down ongoing production lines.</p>
+                        <a href="contact.html" class="btn-primary" style="padding:10px 22px; font-size:0.85rem;">Consult HT Electrical Team &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- FEATURE ROW 3 (FINANCING CAPEX / OPEX PPA) -->
+                <div class="editorial-row gsap-reveal">
+                    <div class="editorial-media-wrap">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop" alt="Industrial PPA Solar Financing">
+                    </div>
+                    <div class="editorial-text-wrap">
+                        <div style="color:#FFC043; font-weight:700; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.12em; margin-bottom:8px;">Financing Spec 03</div>
+                        <h3>Flexible CAPEX Asset Purchase &amp; Zero-CAPEX PPA Options</h3>
+                        <p>Choose 100% upfront asset ownership with 40% Accelerated Depreciation tax write-off in Year 1, OR opt for a Zero-Investment Power Purchase Agreement (PPA) where you only pay for solar energy generated at a 30–40% discount over grid tariffs.</p>
+                        <a href="contact.html" class="btn-primary" style="padding:10px 22px; font-size:0.85rem;">Compare CAPEX vs PPA &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-block">
+        <!-- INDUSTRIAL BENCHMARK METRICS -->
+        <section class="section-block" style="background:var(--navy-surface);">
             <div class="container">
-                <div class="grid-3-col">
-                    <div class="glass-card tilt-card gsap-reveal">
-                        <div style="font-size:2.2rem; margin-bottom:12px;">🏭</div>
-                        <h3 style="font-size:1.3rem; color:#fff; margin-bottom:8px;">Manufacturing &amp; Textiles</h3>
-                        <p style="font-size:0.88rem; color:rgba(255,255,255,0.7);">Custom non-penetrating aluminum clamps for standing seam metal roofs.</p>
+                <div class="section-header center gsap-reveal">
+                    <div class="badge-kicker">Industrial Benchmarks</div>
+                    <h2 class="section-title">Factory ROI Matrix</h2>
+                </div>
+
+                <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:20px;">
+                    <div class="project-card-asym gsap-reveal" style="padding:22px; text-align:center;">
+                        <div style="font-size:2rem; color:#FFC043; font-weight:700; font-family:'Space Grotesk',sans-serif; margin-bottom:6px;">3.1 Yrs</div>
+                        <h3>Capital Payback</h3>
+                        <p style="font-size:0.84rem; color:var(--text-secondary);">Avg payback period for manufacturing plants.</p>
                     </div>
 
-                    <div class="glass-card tilt-card gsap-reveal">
-                        <div style="font-size:2.2rem; margin-bottom:12px;">❄️</div>
-                        <h3 style="font-size:1.3rem; color:#fff; margin-bottom:8px;">Cold Storage &amp; Food Processing</h3>
-                        <p style="font-size:0.88rem; color:rgba(255,255,255,0.7);">High daytime solar generation matches 24/7 refrigeration thermal loads.</p>
+                    <div class="project-card-asym gsap-reveal" style="padding:22px; text-align:center;">
+                        <div style="font-size:2rem; color:#FFC043; font-weight:700; font-family:'Space Grotesk',sans-serif; margin-bottom:6px;">40%</div>
+                        <h3>Tax Benefit</h3>
+                        <p style="font-size:0.84rem; color:var(--text-secondary);">Accelerated Depreciation in Year 1.</p>
                     </div>
 
-                    <div class="glass-card tilt-card gsap-reveal">
-                        <div style="font-size:2.2rem; margin-bottom:12px;">⚡</div>
-                        <h3 style="font-size:1.3rem; color:#fff; margin-bottom:8px;">Open-Access Solar Parks</h3>
-                        <p style="font-size:0.88rem; color:rgba(255,255,255,0.7);">Off-site captive ground-mount solar plants wheeling power via DISCOM grid lines.</p>
+                    <div class="project-card-asym gsap-reveal" style="padding:22px; text-align:center;">
+                        <div style="font-size:2rem; color:#10B981; font-weight:700; font-family:'Space Grotesk',sans-serif; margin-bottom:6px;">11kV / 33kV</div>
+                        <h3>HT Interconnection</h3>
+                        <p style="font-size:0.84rem; color:var(--text-secondary);">CEIG approved high tension grid sync.</p>
+                    </div>
+
+                    <div class="project-card-asym gsap-reveal" style="padding:22px; text-align:center;">
+                        <div style="font-size:2rem; color:#10B981; font-weight:700; font-family:'Space Grotesk',sans-serif; margin-bottom:6px;">0%</div>
+                        <h3>Leak Risk</h3>
+                        <p style="font-size:0.84rem; color:var(--text-secondary);">Non-penetrating seam clamps for metal roofs.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- FULL MEGA FOOTER -->
+    <a href="https://wa.me/919876543210" target="_blank" class="floating-whatsapp" title="Chat with Solar Engineer">💬</a>
+
     <footer class="site-footer">
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-grid-4col">
                 <div class="footer-col">
-                    <a href="index.html" class="brand-logo" style="margin-bottom:16px;">
-                        <span class="brand-icon"></span> SOLARNOVA
-                    </a>
-                    <p style="max-width:320px; line-height:1.6;">SolarNova Energy Pvt. Ltd. is India's leading EPC providing rooftop and megawatt-scale solar solutions engineered for maximum financial return and 25-year reliability.</p>
+                    <a href="index.html" class="brand-logo" style="margin-bottom:16px;"><span class="brand-icon"></span> SOLARNOVA</a>
+                    <p style="max-width:320px; line-height:1.6; font-size:0.88rem; color:var(--text-muted);">SolarNova Energy Pvt. Ltd. is an empanelled EPC contractor delivering turnkey rooftop &amp; ground-mount solar power plants with 25-year performance warranties across India.</p>
                 </div>
-
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
@@ -144,7 +190,6 @@
                         <li><a href="case-studies.html">ROI Case Studies</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <h4>Solar Solutions</h4>
                     <ul class="footer-links">
@@ -155,17 +200,15 @@
                         <li><a href="sustainability.html">ESG &amp; CO2 Offset</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <h4>Corporate HQ</h4>
-                    <p style="margin-bottom:8px;">Baner Business Bay, Pune, MH - 411045</p>
-                    <p style="margin-bottom:8px;">Toll-Free: <a href="tel:1800123456" style="color:var(--gold-bright);">1800-123-456</a></p>
-                    <p>Email: <a href="mailto:hello@solarnova.in" style="color:var(--gold-bright);">hello@solarnova.in</a></p>
+                    <p style="margin-bottom:8px; font-size:0.88rem; color:var(--text-muted);">Baner Business Bay, Pune, MH - 411045</p>
+                    <p style="margin-bottom:8px; font-size:0.88rem;">Toll-Free: <a href="tel:1800123456" style="color:#FFC043;">1800-123-456</a></p>
+                    <p style="font-size:0.88rem;">Email: <a href="mailto:hello@solarnova.in" style="color:#FFC043;">hello@solarnova.in</a></p>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <span>© 2026 SolarNova Energy Pvt. Ltd. All rights reserved.</span>
+            <div class="footer-bottom-bar">
+                <span>© 2026 SolarNova Energy Pvt. Ltd. All rights reserved. | GSTIN: 27AABCS9812F1ZX</span>
                 <span>MNRE Empanelled · ISO 9001:2015 Certified</span>
             </div>
         </div>
@@ -173,8 +216,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v=5.0"></script>
 </body>
 
 </html>

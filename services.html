@@ -4,25 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services — SolarNova Energy</title>
-    <meta name="description" content="Explore SolarNova's turnkey EPC services, smart O&M maintenance, DISCOM net-metering approvals, battery storage, and 3D drone audits.">
+    <title>Turnkey Solar EPC Services — SolarNova Energy</title>
+    <meta name="description" content="End-to-end solar EPC services: 3D site audit, structural engineering, DISCOM net-metering approvals, CEIG safety clearance, and 24/7 O&amp;M.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=5.0">
 </head>
 
 <body>
-    <div class="custom-cursor" id="cursor"></div>
-    <div class="cursor-ring" id="cursor-ring"></div>
     <div id="scroll-progress"></div>
 
+    <div id="preloader">
+        <div class="preloader-sun">
+            <div class="preloader-sun-rays"></div>
+            <div class="preloader-sun-core"></div>
+        </div>
+        <div class="preloader-title">SOLARNOVA</div>
+        <div class="preloader-bar-wrap"><div class="preloader-bar" id="preloader-bar"></div></div>
+    </div>
+
+    <!-- UNIFIED HEADER -->
     <header class="nav-header" id="nav-header">
         <div class="nav-container">
-            <a href="index.html" class="brand-logo">
-                <span class="brand-icon"></span> SOLARNOVA
-            </a>
+            <a href="index.html" class="brand-logo"><span class="brand-icon"></span> SOLARNOVA</a>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
@@ -37,18 +43,21 @@
                 </li>
                 <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
                 <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="case-studies.html" class="nav-link">Case Studies</a></li>
-                <li class="nav-item"><a href="technology.html" class="nav-link">Technology</a></li>
-                <li class="nav-item"><a href="sustainability.html" class="nav-link">Sustainability</a></li>
-                <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="faqs.html" class="nav-link">FAQs</a></li>
-                <li class="nav-item"><a href="testimonials.html" class="nav-link">Reviews</a></li>
+                <li class="nav-item">
+                    <a href="case-studies.html" class="nav-link">Insights &amp; More ▾</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="case-studies.html">📊 ROI Case Studies</a></li>
+                        <li class="dropdown-item"><a href="technology.html">⚙️ R&amp;D Technology</a></li>
+                        <li class="dropdown-item"><a href="sustainability.html">🌱 ESG Sustainability</a></li>
+                        <li class="dropdown-item"><a href="blog.html">📰 Solar News &amp; Blog</a></li>
+                        <li class="dropdown-item"><a href="faqs.html">❓ FAQs &amp; Subsidy Guide</a></li>
+                        <li class="dropdown-item"><a href="testimonials.html">⭐ Client Reviews</a></li>
+                        <li class="dropdown-item"><a href="careers.html">💼 Join Our Team</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
-            <div class="nav-btn-wrap">
-                <a href="contact.html" class="btn-nav">Get Free Audit</a>
-            </div>
+            <div class="nav-btn-wrap"><a href="contact.html" class="btn-nav">Get Free Audit</a></div>
             <div class="hamburger-toggle" id="hamburger"><span></span><span></span><span></span></div>
         </div>
     </header>
@@ -61,13 +70,13 @@
             <li><a href="residential.html">Residential Solar</a></li>
             <li><a href="commercial.html">Commercial Solar</a></li>
             <li><a href="industrial.html">Industrial Solar</a></li>
-            <li><a href="products.html">Solar Hardware &amp; Products</a></li>
+            <li><a href="products.html">Solar Hardware</a></li>
             <li><a href="projects.html">Projects Portfolio</a></li>
-            <li><a href="case-studies.html">ROI Case Studies</a></li>
-            <li><a href="technology.html">Technology &amp; R&amp;D</a></li>
-            <li><a href="sustainability.html">ESG Sustainability</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="technology.html">Technology</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
             <li><a href="careers.html">Careers</a></li>
-            <li><a href="blog.html">News &amp; Blog</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="faqs.html">FAQs</a></li>
             <li><a href="testimonials.html">Testimonials</a></li>
             <li><a href="contact.html">Contact Us</a></li>
@@ -75,109 +84,102 @@
     </div>
 
     <main class="app-viewport">
-        <section class="section-block" style="padding-top:60px;">
-            <div class="container">
-                <div class="section-header center gsap-reveal">
-                    <div class="badge-kicker">End-to-End Solutions</div>
-                    <h1 class="section-title">Turnkey Solar EPC &amp; <span class="gold-gradient-text">Operations</span></h1>
-                    <p class="section-subtitle">From initial 3D shading simulation to DISCOM net-metering synchronization and 25-year O&M monitoring, we handle every stage of your solar asset lifecycle.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SERVICES GRID -->
+        <!-- HERO -->
         <section class="section-block">
             <div class="container">
-                <div class="grid-3-col">
-                    <div class="glass-card tilt-card gsap-reveal">
-                        <div style="font-size:2.2rem; margin-bottom:16px;">🏗️</div>
-                        <h3 style="font-size:1.3rem; color:#fff; margin-bottom:10px;">Turnkey Solar EPC</h3>
-                        <p style="font-size:0.9rem; color:rgba(255,255,255,0.7); margin-bottom:16px;">Complete engineering design, procurement of Tier-1 TOPCon panels &amp; string inverters, civil mounting, and grid synchronization within strict timelines.</p>
-                        <a href="contact.html" style="color:var(--gold-bright); font-size:0.85rem; font-weight:600;">Learn More &rarr;</a>
-                    </div>
+                <div class="section-header center gsap-reveal">
+                    <div class="badge-kicker">End-to-End Capabilities</div>
+                    <h1 class="section-title">Turnkey Solar <span class="highlight-solar-gold">EPC Execution</span></h1>
+                    <p class="section-subtitle">From initial 3D LiDAR shading analysis to DISCOM bi-directional net-metering synchronization, SolarNova manages every phase of your solar installation under one roof.</p>
+                </div>
 
-                    <div class="glass-card tilt-card gsap-reveal">
-                        <div style="font-size:2.2rem; margin-bottom:16px;">📊</div>
-                        <h3 style="font-size:1.3rem; color:#fff; margin-bottom:10px;">Smart O&amp;M Asset Management</h3>
-                        <p style="font-size:0.9rem; color:rgba(255,255,255,0.7); margin-bottom:16px;">24/7 cloud telemetry tracking daily kWh generation, automated fault detection, thermal drone inspections, and scheduled panel washing cycles.</p>
-                        <a href="contact.html" style="color:var(--gold-bright); font-size:0.85rem; font-weight:600;">Learn More &rarr;</a>
+                <!-- SERVICE 1 -->
+                <div class="editorial-row gsap-reveal">
+                    <div class="editorial-media-wrap">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop" alt="Engineering Design">
                     </div>
-
-                    <div class="glass-card tilt-card gsap-reveal">
-                        <div style="font-size:2.2rem; margin-bottom:16px;">📋</div>
-                        <h3 style="font-size:1.3rem; color:#fff; margin-bottom:10px;">Net-Metering &amp; DISCOM Approvals</h3>
-                        <p style="font-size:0.9rem; color:rgba(255,255,255,0.7); margin-bottom:16px;">End-to-end management of DISCOM load sanctions, CEIG electrical safety inspections, bi-directional meter installation, and government subsidy filing.</p>
-                        <a href="contact.html" style="color:var(--gold-bright); font-size:0.85rem; font-weight:600;">Learn More &rarr;</a>
+                    <div class="editorial-text-wrap">
+                        <div style="color:#FFC043; font-weight:700; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.12em; margin-bottom:8px;">Service 01</div>
+                        <h3>3D LiDAR Roof Engineering &amp; Shading Simulation</h3>
+                        <p>We execute precision 3D shadow analysis using drone survey data to optimize string layout, azimuth angles, and tilt pitch for maximum annual kWh yield.</p>
+                        <a href="contact.html" class="btn-primary" style="padding:10px 22px; font-size:0.85rem;">Request 3D Audit &rarr;</a>
                     </div>
+                </div>
 
-                    <div class="glass-card tilt-card gsap-reveal">
-                        <div style="font-size:2.2rem; margin-bottom:16px;">🔋</div>
-                        <h3 style="font-size:1.3rem; color:#fff; margin-bottom:10px;">Battery Energy Storage (BESS)</h3>
-                        <p style="font-size:0.9rem; color:rgba(255,255,255,0.7); margin-bottom:16px;">Hybrid inverters paired with LiFePO4 battery modules to deliver uninterrupted zero-downtime backup during DISCOM grid outages.</p>
-                        <a href="contact.html" style="color:var(--gold-bright); font-size:0.85rem; font-weight:600;">Learn More &rarr;</a>
+                <!-- SERVICE 2 -->
+                <div class="editorial-row reverse gsap-reveal">
+                    <div class="editorial-media-wrap">
+                        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1200&auto=format&fit=crop" alt="Procurement & Construction">
                     </div>
-
-                    <div class="glass-card tilt-card gsap-reveal">
-                        <div style="font-size:2.2rem; margin-bottom:16px;">💳</div>
-                        <h3 style="font-size:1.3rem; color:#fff; margin-bottom:10px;">Solar Financing &amp; PPA</h3>
-                        <p style="font-size:0.9rem; color:rgba(255,255,255,0.7); margin-bottom:16px;">Flexible capital solutions including zero-down OPEX Pay-As-You-Go PPA contracts and low-interest green bank loans for commercial rooftop projects.</p>
-                        <a href="contact.html" style="color:var(--gold-bright); font-size:0.85rem; font-weight:600;">Learn More &rarr;</a>
+                    <div class="editorial-text-wrap">
+                        <div style="color:#FFC043; font-weight:700; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.12em; margin-bottom:8px;">Service 02</div>
+                        <h3>Tier-1 ALMM Procurement &amp; Hot-Dip Construction</h3>
+                        <p>Direct supply chain procurement of MNRE-approved N-Type TOPCon bifacial modules, IP65 smart string inverters, and hot-dip galvanized mounting structures rated for 180 km/h wind speeds.</p>
+                        <a href="products.html" class="btn-primary" style="padding:10px 22px; font-size:0.85rem;">Inspect Products &rarr;</a>
                     </div>
+                </div>
 
-                    <div class="glass-card tilt-card gsap-reveal">
-                        <div style="font-size:2.2rem; margin-bottom:16px;">📐</div>
-                        <h3 style="font-size:1.3rem; color:#fff; margin-bottom:10px;">3D Drone Shading Audit</h3>
-                        <p style="font-size:0.9rem; color:rgba(255,255,255,0.7); margin-bottom:16px;">High-precision LIDAR drone roof surveys simulating year-round shadow paths of parapets and trees for optimal panel pitch placement.</p>
-                        <a href="contact.html" style="color:var(--gold-bright); font-size:0.85rem; font-weight:600;">Learn More &rarr;</a>
+                <!-- SERVICE 3 -->
+                <div class="editorial-row gsap-reveal">
+                    <div class="editorial-media-wrap">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop" alt="DISCOM Clearances">
+                    </div>
+                    <div class="editorial-text-wrap">
+                        <div style="color:#FFC043; font-weight:700; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.12em; margin-bottom:8px;">Service 03</div>
+                        <h3>DISCOM Net-Metering &amp; Govt Subsidy Processing</h3>
+                        <p>We process all DISCOM load sanction applications, CEIG electrical safety approvals, bi-directional net-meter testing, and direct PM Surya Ghar Govt subsidy claims.</p>
+                        <a href="contact.html" class="btn-primary" style="padding:10px 22px; font-size:0.85rem;">Check Subsidy Status &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PROCESS WORKFLOW -->
-        <section class="section-block">
+        <!-- 4-STEP WORKFLOW -->
+        <section class="section-block" style="background:var(--navy-surface);">
             <div class="container">
                 <div class="section-header center gsap-reveal">
-                    <div class="badge-kicker">How We Work</div>
-                    <h2 class="section-title">4-Step Execution Workflow</h2>
+                    <div class="badge-kicker">Execution Timeline</div>
+                    <h2 class="section-title">4 Steps to Solar Power</h2>
                 </div>
 
-                <div class="grid-4-col">
-                    <div class="glass-card tilt-card gsap-reveal">
-                        <div style="font-size:1.6rem; font-weight:700; color:var(--gold-bright); margin-bottom:8px;">01. Roof Audit</div>
-                        <p style="font-size:0.85rem; color:rgba(255,255,255,0.7);">Engineer site visit, 3D shading simulation &amp; Structural Load Testing.</p>
+                <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:20px;">
+                    <div class="project-card-asym gsap-reveal" style="padding:22px;">
+                        <div style="font-size:2rem; color:var(--gold-bright); font-weight:700; font-family:'Space Grotesk',sans-serif; margin-bottom:6px;">01</div>
+                        <h3>Site Survey</h3>
+                        <p>Detailed physical and drone shadow mapping of your terrace.</p>
                     </div>
 
-                    <div class="glass-card tilt-card gsap-reveal">
-                        <div style="font-size:1.6rem; font-weight:700; color:var(--gold-bright); margin-bottom:8px;">02. DISCOM Sanction</div>
-                        <p style="font-size:0.85rem; color:rgba(255,255,255,0.7);">Filing load sanction application &amp; obtaining CEIG safety approvals.</p>
+                    <div class="project-card-asym gsap-reveal" style="padding:22px;">
+                        <div style="font-size:2rem; color:var(--gold-bright); font-weight:700; font-family:'Space Grotesk',sans-serif; margin-bottom:6px;">02</div>
+                        <h3>DISCOM Sanction</h3>
+                        <p>Filing grid interconnection paperwork with MSEDCL/BESCOM.</p>
                     </div>
 
-                    <div class="glass-card tilt-card gsap-reveal">
-                        <div style="font-size:1.6rem; font-weight:700; color:var(--gold-bright); margin-bottom:8px;">03. Installation</div>
-                        <p style="font-size:0.85rem; color:rgba(255,255,255,0.7);">Rapid 7-day mounting of Tier-1 TOPCon panels &amp; smart string inverters.</p>
+                    <div class="project-card-asym gsap-reveal" style="padding:22px;">
+                        <div style="font-size:2rem; color:var(--gold-bright); font-weight:700; font-family:'Space Grotesk',sans-serif; margin-bottom:6px;">03</div>
+                        <h3>Installation</h3>
+                        <p>Rapid mounting of Tier-1 TOPCon panels &amp; IP65 string inverters.</p>
                     </div>
 
-                    <div class="glass-card tilt-card gsap-reveal">
-                        <div style="font-size:1.6rem; font-weight:700; color:var(--emerald); margin-bottom:8px;">04. Net Metering</div>
-                        <p style="font-size:0.85rem; color:rgba(255,255,255,0.7);">Meter installation, grid synchronization &amp; PM Surya Ghar subsidy credit.</p>
+                    <div class="project-card-asym gsap-reveal" style="padding:22px;">
+                        <div style="font-size:2rem; color:#10B981; font-weight:700; font-family:'Space Grotesk',sans-serif; margin-bottom:6px;">04</div>
+                        <h3>Net-Metering</h3>
+                        <p>Bi-directional meter installation and official grid switch-on!</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- FULL MEGA FOOTER -->
+    <a href="https://wa.me/919876543210" target="_blank" class="floating-whatsapp" title="Chat with Solar Engineer">💬</a>
+
     <footer class="site-footer">
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-grid-4col">
                 <div class="footer-col">
-                    <a href="index.html" class="brand-logo" style="margin-bottom:16px;">
-                        <span class="brand-icon"></span> SOLARNOVA
-                    </a>
-                    <p style="max-width:320px; line-height:1.6;">SolarNova Energy Pvt. Ltd. is India's leading EPC providing rooftop and megawatt-scale solar solutions engineered for maximum financial return and 25-year reliability.</p>
+                    <a href="index.html" class="brand-logo" style="margin-bottom:16px;"><span class="brand-icon"></span> SOLARNOVA</a>
+                    <p style="max-width:320px; line-height:1.6; font-size:0.88rem; color:var(--text-muted);">SolarNova Energy Pvt. Ltd. is an empanelled EPC contractor delivering turnkey rooftop &amp; ground-mount solar power plants with 25-year performance warranties across India.</p>
                 </div>
-
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
@@ -188,7 +190,6 @@
                         <li><a href="case-studies.html">ROI Case Studies</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <h4>Solar Solutions</h4>
                     <ul class="footer-links">
@@ -199,17 +200,15 @@
                         <li><a href="sustainability.html">ESG &amp; CO2 Offset</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <h4>Corporate HQ</h4>
-                    <p style="margin-bottom:8px;">Baner Business Bay, Pune, MH - 411045</p>
-                    <p style="margin-bottom:8px;">Toll-Free: <a href="tel:1800123456" style="color:var(--gold-bright);">1800-123-456</a></p>
-                    <p>Email: <a href="mailto:hello@solarnova.in" style="color:var(--gold-bright);">hello@solarnova.in</a></p>
+                    <p style="margin-bottom:8px; font-size:0.88rem; color:var(--text-muted);">Baner Business Bay, Pune, MH - 411045</p>
+                    <p style="margin-bottom:8px; font-size:0.88rem;">Toll-Free: <a href="tel:1800123456" style="color:#FFC043;">1800-123-456</a></p>
+                    <p style="font-size:0.88rem;">Email: <a href="mailto:hello@solarnova.in" style="color:#FFC043;">hello@solarnova.in</a></p>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <span>© 2026 SolarNova Energy Pvt. Ltd. All rights reserved.</span>
+            <div class="footer-bottom-bar">
+                <span>© 2026 SolarNova Energy Pvt. Ltd. All rights reserved. | GSTIN: 27AABCS9812F1ZX</span>
                 <span>MNRE Empanelled · ISO 9001:2015 Certified</span>
             </div>
         </div>
@@ -217,8 +216,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v=5.0"></script>
 </body>
 
 </html>

@@ -5,24 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us — SolarNova Energy</title>
-    <meta name="description" content="Learn about SolarNova Energy's mission, executive leadership team, and 15+ years of engineering solar power plants across India.">
+    <meta name="description" content="Learn about SolarNova Energy — India's premier Solar EPC with over 145 MW installed capacity across 21 states.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=5.0">
 </head>
 
 <body>
-    <div class="custom-cursor" id="cursor"></div>
-    <div class="cursor-ring" id="cursor-ring"></div>
     <div id="scroll-progress"></div>
 
+    <div id="preloader">
+        <div class="preloader-sun">
+            <div class="preloader-sun-rays"></div>
+            <div class="preloader-sun-core"></div>
+        </div>
+        <div class="preloader-title">SOLARNOVA</div>
+        <div class="preloader-bar-wrap">
+            <div class="preloader-bar" id="preloader-bar"></div>
+        </div>
+    </div>
+
+    <!-- UNIFIED HEADER -->
     <header class="nav-header" id="nav-header">
         <div class="nav-container">
-            <a href="index.html" class="brand-logo">
-                <span class="brand-icon"></span> SOLARNOVA
-            </a>
+            <a href="index.html" class="brand-logo"><span class="brand-icon"></span> SOLARNOVA</a>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link active">About Us</a></li>
@@ -37,18 +45,21 @@
                 </li>
                 <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
                 <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="case-studies.html" class="nav-link">Case Studies</a></li>
-                <li class="nav-item"><a href="technology.html" class="nav-link">Technology</a></li>
-                <li class="nav-item"><a href="sustainability.html" class="nav-link">Sustainability</a></li>
-                <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="faqs.html" class="nav-link">FAQs</a></li>
-                <li class="nav-item"><a href="testimonials.html" class="nav-link">Reviews</a></li>
+                <li class="nav-item">
+                    <a href="case-studies.html" class="nav-link">Insights &amp; More ▾</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="case-studies.html">📊 ROI Case Studies</a></li>
+                        <li class="dropdown-item"><a href="technology.html">⚙️ R&amp;D Technology</a></li>
+                        <li class="dropdown-item"><a href="sustainability.html">🌱 ESG Sustainability</a></li>
+                        <li class="dropdown-item"><a href="blog.html">📰 Solar News &amp; Blog</a></li>
+                        <li class="dropdown-item"><a href="faqs.html">❓ FAQs &amp; Subsidy Guide</a></li>
+                        <li class="dropdown-item"><a href="testimonials.html">⭐ Client Reviews</a></li>
+                        <li class="dropdown-item"><a href="careers.html">💼 Join Our Team</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
-            <div class="nav-btn-wrap">
-                <a href="contact.html" class="btn-nav">Get Free Audit</a>
-            </div>
+            <div class="nav-btn-wrap"><a href="contact.html" class="btn-nav">Get Free Audit</a></div>
             <div class="hamburger-toggle" id="hamburger"><span></span><span></span><span></span></div>
         </div>
     </header>
@@ -61,13 +72,13 @@
             <li><a href="residential.html">Residential Solar</a></li>
             <li><a href="commercial.html">Commercial Solar</a></li>
             <li><a href="industrial.html">Industrial Solar</a></li>
-            <li><a href="products.html">Solar Hardware &amp; Products</a></li>
+            <li><a href="products.html">Solar Hardware</a></li>
             <li><a href="projects.html">Projects Portfolio</a></li>
-            <li><a href="case-studies.html">ROI Case Studies</a></li>
-            <li><a href="technology.html">Technology &amp; R&amp;D</a></li>
-            <li><a href="sustainability.html">ESG Sustainability</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="technology.html">Technology</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
             <li><a href="careers.html">Careers</a></li>
-            <li><a href="blog.html">News &amp; Blog</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="faqs.html">FAQs</a></li>
             <li><a href="testimonials.html">Testimonials</a></li>
             <li><a href="contact.html">Contact Us</a></li>
@@ -76,29 +87,28 @@
 
     <main class="app-viewport">
         <!-- HERO -->
-        <section class="section-block" style="padding-top:60px;">
+        <section class="section-block">
             <div class="container">
                 <div class="section-header center gsap-reveal">
                     <div class="badge-kicker">Our Mission</div>
-                    <h1 class="section-title">Powering India's Clean <span class="gold-gradient-text">Energy Revolution</span></h1>
-                    <p class="section-subtitle">Founded in 2011, SolarNova Energy has grown from a specialized solar engineering boutique into one of India's most trusted EPC developers, commissioning over 145 MW of solar capacity.</p>
+                    <h1 class="section-title">Powering India's Clean <span class="highlight-solar-gold">Energy Revolution</span></h1>
+                    <p class="section-subtitle">Founded in 2011, SolarNova Energy has grown from a specialized solar engineering boutique into one of India's most trusted EPC developers, commissioning over 145 MW of solar capacity across 21 states.</p>
                 </div>
 
-                <div class="grid-2-col" style="margin-top:40px;">
-                    <div class="glass-card gsap-reveal">
-                        <h3 style="font-size:1.5rem; color:#fff; margin-bottom:12px;">Pioneering Solar Engineering</h3>
-                        <p style="font-size:0.95rem; color:rgba(255,255,255,0.75); line-height:1.65; margin-bottom:14px;">We combine advanced 3D drone roof modeling, N-Type TOPCon bifacial cell architecture, and automated DISCOM net-metering workflows to deliver maximum lifetime kWh output.</p>
-                        <p style="font-size:0.95rem; color:rgba(255,255,255,0.75); line-height:1.65;">Every project is designed for 25-year structural integrity, backed by 24/7 cloud telemetry asset management.</p>
+                <div class="editorial-row gsap-reveal" style="margin-bottom:0;">
+                    <div class="editorial-text-wrap">
+                        <h3 style="font-size:1.6rem; color:#fff; margin-bottom:12px;">Pioneering Solar Engineering</h3>
+                        <p style="font-size:0.98rem; color:var(--text-secondary); line-height:1.65; margin-bottom:14px;">We combine advanced 3D drone roof modeling, N-Type TOPCon bifacial cell architecture, and automated DISCOM net-metering workflows to deliver maximum lifetime kWh output.</p>
+                        <p style="font-size:0.98rem; color:var(--text-secondary); line-height:1.65;">Every project is designed for 25-year structural integrity, backed by 24/7 cloud telemetry asset management.</p>
                     </div>
-
-                    <div class="glass-card gsap-reveal">
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=800&auto=format&fit=crop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=800&auto=format&fit=crop';" alt="Solar Installation Team" style="border-radius:var(--radius-md); width:100%; height:260px; object-fit:cover;">
+                    <div class="editorial-media-wrap" style="height:320px;">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop" alt="Solar Installation Engineering Array">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- MILESTONES SECTION -->
+        <!-- MILESTONES -->
         <section class="section-block">
             <div class="container">
                 <div class="section-header center gsap-reveal">
@@ -106,29 +116,26 @@
                     <h2 class="section-title">Our Growth Milestones</h2>
                 </div>
 
-                <div class="grid-3-col">
-                    <div class="glass-card tilt-card gsap-reveal">
-                        <div style="font-size:2rem; color:var(--gold-bright); font-weight:700; font-family:'Space Grotesk',sans-serif; margin-bottom:8px;">2011 — 2015</div>
-                        <h3 style="font-size:1.2rem; color:#fff; margin-bottom:8px;">Rooftop Pioneer</h3>
-                        <p style="font-size:0.88rem; color:rgba(255,255,255,0.7);">Commissioned over 500 residential rooftops in Maharashtra &amp; Gujarat, securing early MNRE empanelment.</p>
+                <div class="project-asym-grid">
+                    <div class="project-card-asym gsap-reveal">
+                        <div class="project-content-body">
+                            <div style="font-size:1.8rem; color:var(--gold-bright); font-weight:700; font-family:'Space Grotesk',sans-serif; margin-bottom:6px;">2011 — 2015</div>
+                            <h3>Rooftop Pioneer</h3>
+                            <p>Commissioned over 500 residential rooftops in Maharashtra &amp; Gujarat, securing early MNRE channel partner empanelment.</p>
+                        </div>
                     </div>
-
-                    <div class="glass-card tilt-card gsap-reveal">
-                        <div style="font-size:2rem; color:var(--gold-bright); font-weight:700; font-family:'Space Grotesk',sans-serif; margin-bottom:8px;">2016 — 2020</div>
-                        <h3 style="font-size:1.2rem; color:#fff; margin-bottom:8px;">Commercial Expansion</h3>
-                        <p style="font-size:0.88rem; color:rgba(255,255,255,0.7);">Expanded into commercial IT parks and industrial textile mills, surpassing 50 MW total installed capacity.</p>
-                    </div>
-
-                    <div class="glass-card tilt-card gsap-reveal">
-                        <div style="font-size:2rem; color:var(--emerald); font-weight:700; font-family:'Space Grotesk',sans-serif; margin-bottom:8px;">2021 — 2026</div>
-                        <h3 style="font-size:1.2rem; color:#fff; margin-bottom:8px;">Pan-India Leader</h3>
-                        <p style="font-size:0.88rem; color:rgba(255,255,255,0.7);">Active in 21 Indian states with 145+ MW energized, 24/7 IoT cloud monitoring, and automated drone cleaning.</p>
+                    <div class="project-card-asym gsap-reveal">
+                        <div class="project-content-body">
+                            <div style="font-size:1.8rem; color:var(--gold-bright); font-weight:700; font-family:'Space Grotesk',sans-serif; margin-bottom:6px;">2016 — 2020</div>
+                            <h3>Commercial &amp; Industrial Scale</h3>
+                            <p>Expanded into commercial IT parks and industrial textile mills, surpassing 50 MW total installed capacity.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- LEADERSHIP TEAM -->
+        <!-- LEADERSHIP -->
         <section class="section-block">
             <div class="container">
                 <div class="section-header center gsap-reveal">
@@ -136,43 +143,41 @@
                     <h2 class="section-title">Engineers &amp; Energy Pioneers</h2>
                 </div>
 
-                <div class="grid-3-col">
-                    <div class="glass-card tilt-card gsap-reveal" style="text-align:center;">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509391366360-2e959784a276?q=400&auto=format&fit=crop';" alt="CEO" style="width:110px; height:110px; border-radius:50%; object-fit:cover; margin:0 auto 16px; border:2px solid var(--gold-bright);">
-                        <h3 style="font-size:1.2rem; color:#fff; margin-bottom:4px;">Vikramaditya Deshmukh</h3>
-                        <div style="font-size:0.82rem; color:var(--gold-bright); font-weight:600; margin-bottom:12px;">Founder &amp; Managing Director</div>
-                        <p style="font-size:0.85rem; color:rgba(255,255,255,0.7);">Ex-Siemens Power Systems Engineer with 18+ years of renewable grid infrastructure expertise.</p>
+                <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:24px;">
+                    <div class="project-card-asym gsap-reveal" style="text-align:center; padding:24px;">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop" alt="CEO" style="width:100px; height:100px; border-radius:50%; object-fit:cover; margin:0 auto 14px; border:2px solid var(--gold-bright);">
+                        <h3 style="font-size:1.15rem; color:#fff;">Vikramaditya Deshmukh</h3>
+                        <div style="font-size:0.8rem; color:var(--gold-bright); font-weight:600; margin-bottom:8px;">Founder &amp; MD</div>
+                        <p style="font-size:0.85rem; color:var(--text-secondary);">Ex-Siemens Power Systems Engineer with 18+ years of grid infrastructure expertise.</p>
                     </div>
 
-                    <div class="glass-card tilt-card gsap-reveal" style="text-align:center;">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509391366360-2e959784a276?q=400&auto=format&fit=crop';" alt="CTO" style="width:110px; height:110px; border-radius:50%; object-fit:cover; margin:0 auto 16px; border:2px solid var(--gold-bright);">
-                        <h3 style="font-size:1.2rem; color:#fff; margin-bottom:4px;">Dr. Ananya Subramanian</h3>
-                        <div style="font-size:0.82rem; color:var(--gold-bright); font-weight:600; margin-bottom:12px;">Chief Technology Officer</div>
-                        <p style="font-size:0.85rem; color:rgba(255,255,255,0.7);">Ph.D. in Photovoltaics from IIT Bombay. Specializes in N-Type TOPCon &amp; smart grid string inverters.</p>
+                    <div class="project-card-asym gsap-reveal" style="text-align:center; padding:24px;">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" alt="CTO" style="width:100px; height:100px; border-radius:50%; object-fit:cover; margin:0 auto 14px; border:2px solid var(--gold-bright);">
+                        <h3 style="font-size:1.15rem; color:#fff;">Dr. Ananya Subramanian</h3>
+                        <div style="font-size:0.8rem; color:var(--gold-bright); font-weight:600; margin-bottom:8px;">Chief Technology Officer</div>
+                        <p style="font-size:0.85rem; color:var(--text-secondary);">Ph.D. in Photovoltaics from IIT Bombay. Specializes in N-Type TOPCon cells.</p>
                     </div>
 
-                    <div class="glass-card tilt-card gsap-reveal" style="text-align:center;">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509391366360-2e959784a276?q=400&auto=format&fit=crop';" alt="Head of Operations" style="width:110px; height:110px; border-radius:50%; object-fit:cover; margin:0 auto 16px; border:2px solid var(--gold-bright);">
-                        <h3 style="font-size:1.2rem; color:#fff; margin-bottom:4px;">Siddharth Kulkarni</h3>
-                        <div style="font-size:0.82rem; color:var(--gold-bright); font-weight:600; margin-bottom:12px;">Head of Turnkey Operations</div>
-                        <p style="font-size:0.85rem; color:rgba(255,255,255,0.7);">Oversees 40+ certified installation crews and DISCOM net-metering compliance teams pan-India.</p>
+                    <div class="project-card-asym gsap-reveal" style="text-align:center; padding:24px;">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop" alt="Operations" style="width:100px; height:100px; border-radius:50%; object-fit:cover; margin:0 auto 14px; border:2px solid var(--gold-bright);">
+                        <h3 style="font-size:1.15rem; color:#fff;">Siddharth Kulkarni</h3>
+                        <div style="font-size:0.8rem; color:var(--gold-bright); font-weight:600; margin-bottom:8px;">Head of Operations</div>
+                        <p style="font-size:0.85rem; color:var(--text-secondary);">Oversees 40+ certified installation crews and DISCOM net-metering compliance teams.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- FULL MEGA FOOTER -->
+    <a href="https://wa.me/919876543210" target="_blank" class="floating-whatsapp" title="Chat with Solar Engineer">💬</a>
+
     <footer class="site-footer">
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-grid-4col">
                 <div class="footer-col">
-                    <a href="index.html" class="brand-logo" style="margin-bottom:16px;">
-                        <span class="brand-icon"></span> SOLARNOVA
-                    </a>
-                    <p style="max-width:320px; line-height:1.6;">SolarNova Energy Pvt. Ltd. is India's leading EPC providing rooftop and megawatt-scale solar solutions engineered for maximum financial return and 25-year reliability.</p>
+                    <a href="index.html" class="brand-logo" style="margin-bottom:16px;"><span class="brand-icon"></span> SOLARNOVA</a>
+                    <p style="max-width:320px; line-height:1.6; font-size:0.88rem; color:var(--text-muted);">SolarNova Energy Pvt. Ltd. is an empanelled EPC contractor delivering turnkey rooftop &amp; ground-mount solar power plants with 25-year performance warranties across India.</p>
                 </div>
-
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
@@ -183,7 +188,6 @@
                         <li><a href="case-studies.html">ROI Case Studies</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <h4>Solar Solutions</h4>
                     <ul class="footer-links">
@@ -194,17 +198,15 @@
                         <li><a href="sustainability.html">ESG &amp; CO2 Offset</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <h4>Corporate HQ</h4>
-                    <p style="margin-bottom:8px;">Baner Business Bay, Pune, MH - 411045</p>
-                    <p style="margin-bottom:8px;">Toll-Free: <a href="tel:1800123456" style="color:var(--gold-bright);">1800-123-456</a></p>
-                    <p>Email: <a href="mailto:hello@solarnova.in" style="color:var(--gold-bright);">hello@solarnova.in</a></p>
+                    <p style="margin-bottom:8px; font-size:0.88rem; color:var(--text-muted);">Baner Business Bay, Pune, MH - 411045</p>
+                    <p style="margin-bottom:8px; font-size:0.88rem;">Toll-Free: <a href="tel:1800123456" style="color:#FFC043;">1800-123-456</a></p>
+                    <p style="font-size:0.88rem;">Email: <a href="mailto:hello@solarnova.in" style="color:#FFC043;">hello@solarnova.in</a></p>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <span>© 2026 SolarNova Energy Pvt. Ltd. All rights reserved.</span>
+            <div class="footer-bottom-bar">
+                <span>© 2026 SolarNova Energy Pvt. Ltd. All rights reserved. | GSTIN: 27AABCS9812F1ZX</span>
                 <span>MNRE Empanelled · ISO 9001:2015 Certified</span>
             </div>
         </div>
@@ -212,9 +214,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v=5.0"></script>
 </body>
 
 </html>

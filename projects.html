@@ -4,25 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects Portfolio — SolarNova Energy</title>
-    <meta name="description" content="Explore SolarNova Energy's completed rooftop and ground-mount solar projects across 21 Indian states.">
+    <title>Solar Projects Portfolio — SolarNova Energy</title>
+    <meta name="description" content="Browse completed solar projects: residential villas, commercial IT towers, and industrial factory roofs across India.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=5.0">
 </head>
 
 <body>
-    <div class="custom-cursor" id="cursor"></div>
-    <div class="cursor-ring" id="cursor-ring"></div>
     <div id="scroll-progress"></div>
 
+    <div id="preloader">
+        <div class="preloader-sun">
+            <div class="preloader-sun-rays"></div>
+            <div class="preloader-sun-core"></div>
+        </div>
+        <div class="preloader-title">SOLARNOVA</div>
+        <div class="preloader-bar-wrap"><div class="preloader-bar" id="preloader-bar"></div></div>
+    </div>
+
+    <!-- UNIFIED HEADER -->
     <header class="nav-header" id="nav-header">
         <div class="nav-container">
-            <a href="index.html" class="brand-logo">
-                <span class="brand-icon"></span> SOLARNOVA
-            </a>
+            <a href="index.html" class="brand-logo"><span class="brand-icon"></span> SOLARNOVA</a>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
@@ -37,20 +43,22 @@
                 </li>
                 <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
                 <li class="nav-item"><a href="projects.html" class="nav-link active">Projects</a></li>
-                <li class="nav-item"><a href="case-studies.html" class="nav-link">Case Studies</a></li>
-                <li class="nav-item"><a href="technology.html" class="nav-link">Technology</a></li>
-                <li class="nav-item"><a href="sustainability.html" class="nav-link">Sustainability</a></li>
-                <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="faqs.html" class="nav-link">FAQs</a></li>
-                <li class="nav-item"><a href="testimonials.html" class="nav-link">Reviews</a></li>
+                <li class="nav-item">
+                    <a href="case-studies.html" class="nav-link">Insights &amp; More ▾</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="case-studies.html">📊 ROI Case Studies</a></li>
+                        <li class="dropdown-item"><a href="technology.html">⚙️ R&amp;D Technology</a></li>
+                        <li class="dropdown-item"><a href="sustainability.html">🌱 ESG Sustainability</a></li>
+                        <li class="dropdown-item"><a href="blog.html">📰 Solar News &amp; Blog</a></li>
+                        <li class="dropdown-item"><a href="faqs.html">❓ FAQs &amp; Subsidy Guide</a></li>
+                        <li class="dropdown-item"><a href="testimonials.html">⭐ Client Reviews</a></li>
+                        <li class="dropdown-item"><a href="careers.html">💼 Join Our Team</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
-            <div class="nav-btn-wrap">
-                <a href="contact.html" class="btn-nav">Get Free Audit</a>
-            </div>
+            <div class="nav-btn-wrap"><a href="contact.html" class="btn-nav">Get Free Audit</a></div>
             <div class="hamburger-toggle" id="hamburger"><span></span><span></span><span></span></div>
-        </div>
     </header>
 
     <div class="mobile-nav-overlay" id="mobile-menu">
@@ -61,13 +69,13 @@
             <li><a href="residential.html">Residential Solar</a></li>
             <li><a href="commercial.html">Commercial Solar</a></li>
             <li><a href="industrial.html">Industrial Solar</a></li>
-            <li><a href="products.html">Solar Hardware &amp; Products</a></li>
+            <li><a href="products.html">Solar Hardware</a></li>
             <li><a href="projects.html" class="active">Projects Portfolio</a></li>
-            <li><a href="case-studies.html">ROI Case Studies</a></li>
-            <li><a href="technology.html">Technology &amp; R&amp;D</a></li>
-            <li><a href="sustainability.html">ESG Sustainability</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="technology.html">Technology</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
             <li><a href="careers.html">Careers</a></li>
-            <li><a href="blog.html">News &amp; Blog</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="faqs.html">FAQs</a></li>
             <li><a href="testimonials.html">Testimonials</a></li>
             <li><a href="contact.html">Contact Us</a></li>
@@ -75,73 +83,61 @@
     </div>
 
     <main class="app-viewport">
-        <section class="section-block" style="padding-top:60px;">
+        <!-- HERO -->
+        <section class="section-block">
             <div class="container">
                 <div class="section-header center gsap-reveal">
-                    <div class="badge-kicker">Pan-India Installations</div>
-                    <h1 class="section-title">Engineered Solar <span class="gold-gradient-text">Portfolio</span></h1>
-                    <p class="section-subtitle">Over 4,800 rooftop installations and megawatt-scale solar arrays commissioned with 100% DISCOM net-metering compliance.</p>
+                    <div class="badge-kicker">Pan-India Portfolio</div>
+                    <h1 class="section-title">Engineered <span class="highlight-solar-gold">Solar Installations</span></h1>
+                    <p class="section-subtitle">Over 4,800 rooftops energized across 21 Indian states. Explore our residential, commercial, and megawatt industrial installations.</p>
                 </div>
 
-                <div style="display:flex; justify-content:center; gap:12px; margin-bottom:36px; flex-wrap:wrap;">
-                    <button class="gallery-btn active" data-filter="all">All Projects</button>
-                    <button class="gallery-btn" data-filter="residential">Residential</button>
-                    <button class="gallery-btn" data-filter="commercial">Commercial</button>
-                    <button class="gallery-btn" data-filter="industrial">Industrial</button>
-                </div>
-
-                <div class="gallery-grid">
-                    <div class="gallery-item" data-category="residential" data-src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop" data-title="Luxury Villa Rooftop — Pune (8.5 kW)">
-                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=600&auto=format&fit=crop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=600&auto=format&fit=crop';" alt="Rooftop Villa">
-                        <div class="gallery-overlay">
-                            <div style="font-size:1.8rem;">🔍</div>
-                            <h4>Luxury Villa Rooftop</h4>
-                            <p style="font-size:0.8rem;">Pune, Maharashtra (8.5 kW)</p>
+                <div class="project-asym-grid">
+                    <!-- LARGE FEATURED -->
+                    <div class="project-card-asym gsap-reveal">
+                        <div class="project-img-holder">
+                            <span style="position:absolute; top:14px; left:14px; background:rgba(4,9,18,0.85); border:1px solid #FFC043; color:#FFC043; font-size:0.72rem; font-weight:700; padding:4px 12px; border-radius:100px; z-index:2;">Residential Villa · 5.4 kW</span>
+                            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop" alt="5.4 kW Villa Installation">
+                        </div>
+                        <div class="project-content-body">
+                            <h3>5.4 kW Elevated RCC Slab Array — Pune, MH</h3>
+                            <p>Elevated hot-dip structure keeping terrace space 100% usable for walking and clothes drying. DISCOM net-meter synchronized.</p>
+                            <div style="margin-top:14px; display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--navy-border); padding-top:12px;">
+                                <span style="color:#10B981; font-weight:600; font-size:0.85rem;">Net Bill: ₹480 / month</span>
+                                <a href="residential.html" style="color:#FFC043; font-size:0.85rem; font-weight:600;">System Specs &rarr;</a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="gallery-item" data-category="commercial" data-src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=1200&auto=format&fit=crop" data-title="Tech Park Commercial Rooftop — Bengaluru (140 kW)">
-                        <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=600&auto=format&fit=crop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=600&auto=format&fit=crop';" alt="Commercial Tech Park">
-                        <div class="gallery-overlay">
-                            <div style="font-size:1.8rem;">🔍</div>
-                            <h4>Tech Park Rooftop</h4>
-                            <p style="font-size:0.8rem;">Bengaluru, Karnataka (140 kW)</p>
+                    <!-- SIDE TALL -->
+                    <div class="project-card-asym gsap-reveal">
+                        <div class="project-img-holder">
+                            <span style="position:absolute; top:14px; left:14px; background:rgba(4,9,18,0.85); border:1px solid #FFC043; color:#FFC043; font-size:0.72rem; font-weight:700; padding:4px 12px; border-radius:100px; z-index:2;">Industrial Shed · 250 kW</span>
+                            <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1200&auto=format&fit=crop" alt="250 kW Factory Plant">
                         </div>
-                    </div>
-
-                    <div class="gallery-item" data-category="industrial" data-src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1200&auto=format&fit=crop" data-title="Textile Mill Open Access Plant — Ahmedabad (2.4 MW)">
-                        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=600&auto=format&fit=crop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=600&auto=format&fit=crop';" alt="Industrial Solar Farm">
-                        <div class="gallery-overlay">
-                            <div style="font-size:1.8rem;">🔍</div>
-                            <h4>Textile Mill Solar Plant</h4>
-                            <p style="font-size:0.8rem;">Ahmedabad, Gujarat (2.4 MW)</p>
+                        <div class="project-content-body">
+                            <h3>250 kW Factory Metal Shed Plant — Chakan MIDC</h3>
+                            <p>Non-penetrating seam clamp mounting on standing seam metal roofing, eliminating roof leakage risks.</p>
+                            <div style="margin-top:14px; display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--navy-border); padding-top:12px;">
+                                <span style="color:#FFC043; font-weight:600; font-size:0.85rem;">Payback: 3.1 Years</span>
+                                <a href="industrial.html" style="color:#FFC043; font-size:0.85rem; font-weight:600;">Industrial Specs &rarr;</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- LIGHTBOX -->
-        <div id="lightbox-modal">
-            <div class="lightbox-content">
-                <span class="lightbox-close" id="lightbox-close">&times;</span>
-                <img id="lightbox-img" src="" alt="Zoomed View">
-                <div class="lightbox-caption" id="lightbox-caption"></div>
-            </div>
-        </div>
     </main>
 
-    <!-- FULL MEGA FOOTER -->
+    <a href="https://wa.me/919876543210" target="_blank" class="floating-whatsapp" title="Chat with Solar Engineer">💬</a>
+
     <footer class="site-footer">
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-grid-4col">
                 <div class="footer-col">
-                    <a href="index.html" class="brand-logo" style="margin-bottom:16px;">
-                        <span class="brand-icon"></span> SOLARNOVA
-                    </a>
-                    <p style="max-width:320px; line-height:1.6;">SolarNova Energy Pvt. Ltd. is India's leading EPC providing rooftop and megawatt-scale solar solutions engineered for maximum financial return and 25-year reliability.</p>
+                    <a href="index.html" class="brand-logo" style="margin-bottom:16px;"><span class="brand-icon"></span> SOLARNOVA</a>
+                    <p style="max-width:320px; line-height:1.6; font-size:0.88rem; color:var(--text-muted);">SolarNova Energy Pvt. Ltd. is an empanelled EPC contractor delivering turnkey rooftop &amp; ground-mount solar power plants with 25-year performance warranties across India.</p>
                 </div>
-
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
@@ -152,7 +148,6 @@
                         <li><a href="case-studies.html">ROI Case Studies</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <h4>Solar Solutions</h4>
                     <ul class="footer-links">
@@ -163,17 +158,15 @@
                         <li><a href="sustainability.html">ESG &amp; CO2 Offset</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <h4>Corporate HQ</h4>
-                    <p style="margin-bottom:8px;">Baner Business Bay, Pune, MH - 411045</p>
-                    <p style="margin-bottom:8px;">Toll-Free: <a href="tel:1800123456" style="color:var(--gold-bright);">1800-123-456</a></p>
-                    <p>Email: <a href="mailto:hello@solarnova.in" style="color:var(--gold-bright);">hello@solarnova.in</a></p>
+                    <p style="margin-bottom:8px; font-size:0.88rem; color:var(--text-muted);">Baner Business Bay, Pune, MH - 411045</p>
+                    <p style="margin-bottom:8px; font-size:0.88rem;">Toll-Free: <a href="tel:1800123456" style="color:#FFC043;">1800-123-456</a></p>
+                    <p style="font-size:0.88rem;">Email: <a href="mailto:hello@solarnova.in" style="color:#FFC043;">hello@solarnova.in</a></p>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <span>© 2026 SolarNova Energy Pvt. Ltd. All rights reserved.</span>
+            <div class="footer-bottom-bar">
+                <span>© 2026 SolarNova Energy Pvt. Ltd. All rights reserved. | GSTIN: 27AABCS9812F1ZX</span>
                 <span>MNRE Empanelled · ISO 9001:2015 Certified</span>
             </div>
         </div>
@@ -181,9 +174,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v=5.0"></script>
 </body>
 
 </html>
