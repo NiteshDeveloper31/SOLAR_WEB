@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ---------- 6. THREE.JS 3D HERO CANVAS (ENHANCED ENERGY BEAMS) ----------
+    // ---------- 6. THREE.JS 3D HERO CANVAS (SLICK RIGHT-ALIGNED SOLAR ORB) ----------
     const canvas = document.getElementById('hero-canvas');
     if (canvas && typeof THREE !== 'undefined') {
         const scene = new THREE.Scene();
@@ -125,18 +125,33 @@ document.addEventListener('DOMContentLoaded', () => {
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-        // Create Glowing Sun Core & Solar Rays Particle System (350 Particles)
-        const particleCount = 350;
+        // Generate soft circular glow texture for particles
+        function createGlowTexture() {
+            const pCanvas = document.createElement('canvas');
+            pCanvas.width = 64;
+            pCanvas.height = 64;
+            const ctx = pCanvas.getContext('2d');
+            const grad = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+            grad.addColorStop(0, 'rgba(255, 255, 255, 1)');
+            grad.addColorStop(0.35, 'rgba(244, 168, 53, 0.8)');
+            grad.addColorStop(0.7, 'rgba(255, 122, 0, 0.3)');
+            grad.addColorStop(1, 'rgba(4, 11, 21, 0)');
+            ctx.fillStyle = grad;
+            ctx.fillRect(0, 0, 64, 64);
+            return new THREE.CanvasTexture(pCanvas);
+        }
+
+        const particleCount = 280;
         const geometry = new THREE.BufferGeometry();
         const positions = new Float32Array(particleCount * 3);
         const colors = new Float32Array(particleCount * 3);
 
         const colorGold = new THREE.Color('#FFC043');
         const colorAmber = new THREE.Color('#FF7A00');
-        const colorCyan = new THREE.Color('#00F2FE');
+        const colorCyan = new THREE.Color('#00E676');
 
         for (let i = 0; i < particleCount; i++) {
-            const r = (Math.random() * 5) + 1.2;
+            const r = (Math.random() * 2.6) + 0.6;
             const theta = Math.random() * Math.PI * 2;
             const phi = Math.random() * Math.PI;
 
@@ -154,32 +169,53 @@ document.addEventListener('DOMContentLoaded', () => {
         geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
         geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
+        const particleTexture = createGlowTexture();
         const material = new THREE.PointsMaterial({
-            size: 0.15,
+            size: 0.14,
+            map: particleTexture,
             vertexColors: true,
             transparent: true,
-            opacity: 0.9,
-            blending: THREE.AdditiveBlending
+            opacity: 0.65,
+            blending: THREE.AdditiveBlending,
+            depthWrite: false
         });
 
         const particleSystem = new THREE.Points(geometry, material);
+        
+        // Position particle system on the RIGHT side to frame the dashboard and keep text 100% clear
+        const isDesktop = window.innerWidth > 992;
+        particleSystem.position.set(isDesktop ? 2.4 : 0, 0, 0);
         scene.add(particleSystem);
 
-        camera.position.z = 6.5;
+        // Add orbital sun ring around particle core
+        const ringGeo = new THREE.RingGeometry(2.1, 2.15, 64);
+        const ringMat = new THREE.MeshBasicMaterial({
+            color: 0xF4A835,
+            side: THREE.DoubleSide,
+            transparent: true,
+            opacity: 0.22
+        });
+        const sunRing = new THREE.Mesh(ringGeo, ringMat);
+        sunRing.rotation.x = Math.PI / 3;
+        sunRing.position.set(isDesktop ? 2.4 : 0, 0, 0);
+        scene.add(sunRing);
+
+        camera.position.z = 5.5;
 
         let mouseX3D = 0, mouseY3D = 0;
         document.addEventListener('mousemove', (e) => {
-            mouseX3D = (e.clientX / window.innerWidth - 0.5) * 1.2;
-            mouseY3D = (e.clientY / window.innerHeight - 0.5) * 1.2;
+            mouseX3D = (e.clientX / window.innerWidth - 0.5) * 0.8;
+            mouseY3D = (e.clientY / window.innerHeight - 0.5) * 0.8;
         });
 
         function animate3D() {
             requestAnimationFrame(animate3D);
-            particleSystem.rotation.y += 0.004;
-            particleSystem.rotation.x += 0.0015;
+            particleSystem.rotation.y += 0.003;
+            particleSystem.rotation.x += 0.001;
+            sunRing.rotation.z += 0.002;
 
-            camera.position.x += (mouseX3D - camera.position.x) * 0.06;
-            camera.position.y += (-mouseY3D - camera.position.y) * 0.06;
+            camera.position.x += (mouseX3D - camera.position.x) * 0.04;
+            camera.position.y += (-mouseY3D - camera.position.y) * 0.04;
             camera.lookAt(scene.position);
 
             renderer.render(scene, camera);
@@ -187,6 +223,9 @@ document.addEventListener('DOMContentLoaded', () => {
         animate3D();
 
         window.addEventListener('resize', () => {
+            const isDesktopCurrent = window.innerWidth > 992;
+            particleSystem.position.set(isDesktopCurrent ? 2.4 : 0, 0, 0);
+            sunRing.position.set(isDesktopCurrent ? 2.4 : 0, 0, 0);
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);

@@ -782,19 +782,26 @@ section.section-block {
     width: 100%;
 }
 
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
 .hero-content h1 {
     font-size: clamp(2.2rem, 5vw, 4.8rem);
     font-weight: 700;
     line-height: 1.06;
     color: #ffffff;
+    text-shadow: 0 4px 25px rgba(4, 11, 21, 0.95), 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 .hero-desc {
     font-size: clamp(0.98rem, 1.6vw, 1.2rem);
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.88);
     margin-top: 20px;
     max-width: 540px;
     line-height: 1.65;
+    text-shadow: 0 2px 20px rgba(4, 11, 21, 0.95);
 }
 
 .hero-actions {
