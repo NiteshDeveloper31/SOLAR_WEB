@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarNova Energy — India's Premier Enterprise Solar EPC</title>
+    <meta name="description" content="SolarNova Energy engineers high-efficiency rooftop and utility-scale ground mount solar power plants across India. Calculate your solar ROI instantly.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+    <div id="scroll-progress"></div>
+
+    <div id="preloader">
+        <div class="preloader-sun">
+            <div class="preloader-sun-rays"></div>
+            <div class="preloader-sun-core"></div>
+        </div>
+        <div class="preloader-title">SOLARNOVA</div>
+        <div class="preloader-bar-wrap">
+            <div class="preloader-bar" id="preloader-bar"></div>
+        </div>
+    </div>
+
+    <!-- UNIFIED COMPLETE NAVBAR -->
+    <header class="nav-header" id="nav-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <span class="brand-icon"></span> SOLARNOVA
+            </a>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services ▾</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="services.html">🛠️ All EPC Services</a></li>
+                        <li class="dropdown-item"><a href="residential.html">🏡 Residential Solar</a></li>
+                        <li class="dropdown-item"><a href="commercial.html">🏢 Commercial Solar</a></li>
+                        <li class="dropdown-item"><a href="industrial.html">🏭 Industrial Mega Solar</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                <li class="nav-item"><a href="technology.html" class="nav-link">Technology</a></li>
+                <li class="nav-item"><a href="sustainability.html" class="nav-link">Sustainability</a></li>
+                <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="faqs.html" class="nav-link">FAQs</a></li>
+                <li class="nav-item"><a href="testimonials.html" class="nav-link">Reviews</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-btn-wrap">
+                <a href="contact.html" class="btn-nav">Get Free Audit</a>
+            </div>
+
+            <div class="hamburger-toggle" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </header>
+
+    <!-- UNIFIED COMPLETE MOBILE DRAWER -->
+    <div class="mobile-nav-overlay" id="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services Overview</a></li>
+            <li><a href="residential.html">Residential Solar</a></li>
+            <li><a href="commercial.html">Commercial Solar</a></li>
+            <li><a href="industrial.html">Industrial Solar</a></li>
+            <li><a href="products.html">Solar Hardware &amp; Products</a></li>
+            <li><a href="projects.html">Projects Portfolio</a></li>
+            <li><a href="case-studies.html">ROI Case Studies</a></li>
+            <li><a href="technology.html">Technology &amp; R&amp;D</a></li>
+            <li><a href="sustainability.html">ESG Sustainability</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="blog.html">News &amp; Blog</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <main class="app-viewport">
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <canvas id="hero-canvas"></canvas>
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content gsap-reveal">
+                        <div class="badge-kicker">Pan-India Solar EPC · MNRE Empanelled</div>
+                        <h1>The Sun Rises for Free.<br>We Build What <span class="gold-gradient-text">Captures</span> It.</h1>
+                        <p class="hero-desc">SolarNova Energy designs, installs, and maintains high-efficiency rooftop and ground-mount solar arrays engineered for Indian climate and grid conditions — backed by a 25-year performance warranty.</p>
+                        <div class="hero-actions">
+                            <a href="#calculator-section" class="btn-primary">Calculate Savings &rarr;</a>
+                            <a href="services.html" class="btn-secondary">Explore Solutions</a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card tilt-card gsap-reveal">
+                        <div style="font-size: 0.78rem; color: #00E676; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px;">
+                            ● Live Solar Generation Dashboard
+                        </div>
+                        <h3 style="font-size: 1.4rem; color: #fff;">Real-Time Generation Offset</h3>
+                        <p style="font-size: 0.88rem; color: rgba(255,255,255,0.65); margin-top:4px;">Average 5kW Residential Setup</p>
+
+                        <div class="hero-stats-grid">
+                            <div class="hero-stat-box">
+                                <div class="hero-stat-val">22.4</div>
+                                <div class="hero-stat-lbl">kWh / Day Generated</div>
+                            </div>
+                            <div class="hero-stat-box">
+                                <div class="hero-stat-val">₹ 5,800</div>
+                                <div class="hero-stat-lbl">Est. Monthly Bill Cut</div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 24px; text-align: center;">
+                            <a href="#calculator-section" style="color: var(--gold-bright); font-size: 0.9rem; font-weight: 600;">
+                                Estimate Your Roof's Potential &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS BAR -->
+        <section class="stats-bar-section gsap-reveal">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number"><span class="counter" data-target="4800">0</span><span class="unit">+</span></div>
+                        <div class="stat-label">Rooftops Energized Across India</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number"><span class="counter" data-target="145">0</span><span class="unit">MW</span></div>
+                        <div class="stat-label">Total Installed Solar Capacity</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number"><span class="counter" data-target="21">0</span></div>
+                        <div class="stat-label">Indian States &amp; Union Territories</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number"><span class="counter" data-target="25">0</span><span class="unit">Yr</span></div>
+                        <div class="stat-label">Linear Performance Warranty</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURE SHOWCASE SECTION -->
+        <section class="section-block">
+            <div class="container">
+                <div class="section-header center gsap-reveal">
+                    <div class="badge-kicker">Engineering &amp; Innovation</div>
+                    <h2 class="section-title">Next-Gen Solar <span class="gold-gradient-text">Installations</span></h2>
+                    <p class="section-subtitle">Take a closer look at our high-definition utility solar fields and robotic automated panel maintenance systems in action.</p>
+                </div>
+
+                <div class="feature-showcase-grid">
+                    <div class="feature-showcase-card tilt-card gsap-reveal">
+                        <div class="feature-img-wrap">
+                            <span class="feature-img-badge">Utility Scale · 2.4 MW</span>
+                            <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=1200&auto=format&fit=crop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop';" alt="High-Definition Solar Field Array">
+                        </div>
+                        <div class="feature-card-content">
+                            <h3>Bifacial N-Type Ground-Mount Solar Plant</h3>
+                            <p>Equipped with dual-axis sun tracking software and rear-side albedo reflection capture, boosting annual energy yield by +28% compared to standard fixed-tilt panels.</p>
+                            <div style="margin-top:20px; display:flex; justify-content:space-between; align-items:center;">
+                                <span style="color:var(--gold-bright); font-size:0.9rem; font-weight:600;">Ahmedabad, Gujarat</span>
+                                <a href="industrial.html" style="color:#fff; font-size:0.88rem; font-weight:600;">View Industrial Specs &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-showcase-card tilt-card gsap-reveal">
+                        <div class="feature-img-wrap">
+                            <span class="feature-img-badge">Smart Operations · 24/7 IoT</span>
+                            <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=1200&auto=format&fit=crop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop';" alt="Automated Robotic Solar Cleaning">
+                        </div>
+                        <div class="feature-card-content">
+                            <h3>Robotic Panel Maintenance &amp; Drone Diagnostics</h3>
+                            <p>Automated dry-cleaning robots eliminate dust and soiling losses without consuming a single drop of water, ensuring peak 99.2% operational uptime year-round.</p>
+                            <div style="margin-top:20px; display:flex; justify-content:space-between; align-items:center;">
+                                <span style="color:var(--emerald); font-size:0.9rem; font-weight:600;">● Zero Water Waste</span>
+                                <a href="technology.html" style="color:#fff; font-size:0.88rem; font-weight:600;">Explore Tech Stack &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY SOLARNOVA -->
+        <section class="section-block">
+            <div class="container">
+                <div class="section-header center gsap-reveal">
+                    <div class="badge-kicker">Why SolarNova</div>
+                    <h2 class="section-title">Your Roof is an Idle Power Plant.<br><span class="gold-gradient-text">We Turn It On.</span></h2>
+                    <p class="section-subtitle">Grid tariffs climb 6–9% every year across India. Sunlight doesn't send a bill. Every month you wait is free generation left on the table.</p>
+                </div>
+
+                <div class="grid-3-col">
+                    <div class="glass-card tilt-card gsap-reveal">
+                        <div style="font-size:2.2rem; margin-bottom:16px;">⚡</div>
+                        <h3 style="font-size:1.3rem; margin-bottom:10px;">Cut Bills by 80–90%</h3>
+                        <p style="font-size:0.95rem; color:rgba(255,255,255,0.7);">Offset high slab tariff rates with net-metering. Payback typically achieved within 3.5 to 4.5 years.</p>
+                    </div>
+
+                    <div class="glass-card tilt-card gsap-reveal">
+                        <div style="font-size:2.2rem; margin-bottom:16px;">🛡️</div>
+                        <h3 style="font-size:1.3rem; margin-bottom:10px;">Tier-1 Engineering</h3>
+                        <p style="font-size:0.95rem; color:rgba(255,255,255,0.7);">High-efficiency N-Type TOPCon panels, IP65 smart string inverters, and hot-dip galvanized mounting structures.</p>
+                    </div>
+
+                    <div class="glass-card tilt-card gsap-reveal">
+                        <div style="font-size:2.2rem; margin-bottom:16px;">📜</div>
+                        <h3 style="font-size:1.3rem; margin-bottom:10px;">End-to-End DISCOM Clearance</h3>
+                        <p style="font-size:0.95rem; color:rgba(255,255,255,0.7);">We handle net-metering approvals, CEIG safety inspections, and PM Surya Ghar subsidy filing hassle-free.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALCULATOR WIDGET SECTION -->
+        <section class="section-block" id="calculator-section">
+            <div class="container">
+                <div class="section-header center gsap-reveal">
+                    <div class="badge-kicker">Interactive Tool</div>
+                    <h2 class="section-title">Calculate Your Solar Savings</h2>
+                    <p class="section-subtitle">Adjust your monthly electricity bill to calculate recommended capacity, 25-year return, and payback period instantly.</p>
+                </div>
+
+                <div class="calc-wrapper gsap-reveal">
+                    <div class="calc-grid">
+                        <div class="calc-inputs">
+                            <div class="calc-group">
+                                <label>Property Type</label>
+                                <div class="calc-type-selector">
+                                    <button class="calc-type-btn active" data-type="res">Residential</button>
+                                    <button class="calc-type-btn" data-type="com">Commercial</button>
+                                    <button class="calc-type-btn" data-type="ind">Industrial</button>
+                                </div>
+                            </div>
+
+                            <div class="calc-group">
+                                <label>
+                                    <span>Monthly Electricity Bill</span>
+                                    <span class="calc-badge" id="bill-val-display">₹ 6,500 / mo</span>
+                                </label>
+                                <input type="range" min="1500" max="80000" step="500" value="6500" class="calc-slider" id="bill-slider">
+                            </div>
+
+                            <div style="font-size:0.85rem; color:rgba(255,255,255,0.6);">
+                                💡 <em>Calculated based on standard DISCOM tariff brackets &amp; 300+ sunny days in India.</em>
+                            </div>
+                        </div>
+
+                        <div class="calc-outputs">
+                            <div class="calc-row">
+                                <span class="calc-row-lbl">Recommended System</span>
+                                <span class="calc-row-val" id="out-system-size">5.0 kW</span>
+                            </div>
+
+                            <div class="calc-row">
+                                <span class="calc-row-lbl">Est. Monthly Savings</span>
+                                <span class="calc-row-val highlight" id="out-monthly-savings">₹ 5,850</span>
+                            </div>
+
+                            <div class="calc-row">
+                                <span class="calc-row-lbl">25-Year Net Savings</span>
+                                <span class="calc-row-val" id="out-25yr-savings">₹ 17.5 Lakhs</span>
+                            </div>
+
+                            <div class="calc-row">
+                                <span class="calc-row-lbl">Payback Period</span>
+                                <span class="calc-row-val" id="out-payback">3.6 Years</span>
+                            </div>
+
+                            <div class="calc-row">
+                                <span class="calc-row-lbl">CO₂ Offset / Year</span>
+                                <span class="calc-row-val" id="out-co2">6.2 Tonnes</span>
+                            </div>
+
+                            <a href="contact.html" class="btn-primary" style="text-align:center; justify-content:center; margin-top:10px;">
+                                Get Detailed Proposal for <span id="btn-system-size">5.0 kW</span> &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT GALLERY GRID -->
+        <section class="section-block">
+            <div class="container">
+                <div class="section-header center gsap-reveal">
+                    <div class="badge-kicker">Portfolio</div>
+                    <h2 class="section-title">Engineered Solar Installations</h2>
+                </div>
+
+                <div class="gallery-grid gsap-reveal">
+                    <div class="gallery-item" data-src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop" data-title="Luxury Villa Rooftop Array — Pune (8.5 kW)">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=600&auto=format&fit=crop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=600&auto=format&fit=crop';" alt="Rooftop Solar Villa">
+                        <div class="gallery-overlay">
+                            <div style="font-size:1.8rem; margin-bottom:8px;">🔍</div>
+                            <h4>Luxury Villa Rooftop Array</h4>
+                            <p style="font-size:0.85rem;">Pune, Maharashtra</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=1200&auto=format&fit=crop" data-title="Tech Park Commercial Rooftop — Bengaluru (140 kW)">
+                        <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=600&auto=format&fit=crop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=600&auto=format&fit=crop';" alt="Commercial Solar Array">
+                        <div class="gallery-overlay">
+                            <div style="font-size:1.8rem; margin-bottom:8px;">🔍</div>
+                            <h4>Tech Park Commercial Rooftop</h4>
+                            <p style="font-size:0.85rem;">Bengaluru, Karnataka</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1200&auto=format&fit=crop" data-title="Textile Mill Open Access Plant — Ahmedabad (2.4 MW)">
+                        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=600&auto=format&fit=crop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=600&auto=format&fit=crop';" alt="Industrial Solar Farm">
+                        <div class="gallery-overlay">
+                            <div style="font-size:1.8rem; margin-bottom:8px;">🔍</div>
+                            <h4>Textile Mill Solar Plant</h4>
+                            <p style="font-size:0.85rem;">Ahmedabad, Gujarat</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIGHTBOX MODAL -->
+        <div id="lightbox-modal">
+            <div class="lightbox-content">
+                <span class="lightbox-close" id="lightbox-close">&times;</span>
+                <img id="lightbox-img" src="" alt="Zoomed View">
+                <div class="lightbox-caption" id="lightbox-caption"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FULL MEGA FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="brand-logo" style="margin-bottom:16px;">
+                        <span class="brand-icon"></span> SOLARNOVA
+                    </a>
+                    <p style="max-width:320px; line-height:1.6;">SolarNova Energy Pvt. Ltd. is India's leading EPC providing rooftop and megawatt-scale solar solutions engineered for maximum financial return and 25-year reliability.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About SolarNova</a></li>
+                        <li><a href="services.html">EPC Services</a></li>
+                        <li><a href="products.html">Solar Hardware</a></li>
+                        <li><a href="projects.html">Project Portfolio</a></li>
+                        <li><a href="case-studies.html">ROI Case Studies</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Solar Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="residential.html">Home Rooftop Solar</a></li>
+                        <li><a href="commercial.html">Commercial Rooftops</a></li>
+                        <li><a href="industrial.html">Industrial Open Access</a></li>
+                        <li><a href="technology.html">Smart Monitoring</a></li>
+                        <li><a href="sustainability.html">ESG &amp; CO2 Offset</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Corporate HQ</h4>
+                    <p style="margin-bottom:8px;">Baner Business Bay, Pune, MH - 411045</p>
+                    <p style="margin-bottom:8px;">Toll-Free: <a href="tel:1800123456" style="color:var(--gold-bright);">1800-123-456</a></p>
+                    <p>Email: <a href="mailto:hello@solarnova.in" style="color:var(--gold-bright);">hello@solarnova.in</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 SolarNova Energy Pvt. Ltd. All rights reserved.</span>
+                <span>MNRE Empanelled · ISO 9001:2015 Certified</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

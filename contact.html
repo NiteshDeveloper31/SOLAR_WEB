@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — SolarNova Energy</title>
+    <meta name="description" content="Request a free engineer site audit. SolarNova delivers a full 3D layout, DISCOM clearance roadmap, and ROI report within 48 hours.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .form-group { margin-bottom: 20px; width: 100%; }
+        .form-group label { display: block; font-size: 0.88rem; font-weight: 600; color: rgba(255, 255, 255, 0.85); margin-bottom: 8px; }
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(4, 11, 21, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-sm);
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.25s ease;
+        }
+        .form-control:focus { border-color: var(--gold-bright); }
+    </style>
+</head>
+
+<body>
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+    <div id="scroll-progress"></div>
+
+    <header class="nav-header" id="nav-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <span class="brand-icon"></span> SOLARNOVA
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services ▾</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="services.html">🛠️ All EPC Services</a></li>
+                        <li class="dropdown-item"><a href="residential.html">🏡 Residential Solar</a></li>
+                        <li class="dropdown-item"><a href="commercial.html">🏢 Commercial Solar</a></li>
+                        <li class="dropdown-item"><a href="industrial.html">🏭 Industrial Mega Solar</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                <li class="nav-item"><a href="technology.html" class="nav-link">Technology</a></li>
+                <li class="nav-item"><a href="sustainability.html" class="nav-link">Sustainability</a></li>
+                <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="faqs.html" class="nav-link">FAQs</a></li>
+                <li class="nav-item"><a href="testimonials.html" class="nav-link">Reviews</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="nav-btn-wrap">
+                <a href="contact.html" class="btn-nav">Get Free Audit</a>
+            </div>
+            <div class="hamburger-toggle" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay" id="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services Overview</a></li>
+            <li><a href="residential.html">Residential Solar</a></li>
+            <li><a href="commercial.html">Commercial Solar</a></li>
+            <li><a href="industrial.html">Industrial Solar</a></li>
+            <li><a href="products.html">Solar Hardware &amp; Products</a></li>
+            <li><a href="projects.html">Projects Portfolio</a></li>
+            <li><a href="case-studies.html">ROI Case Studies</a></li>
+            <li><a href="technology.html">Technology &amp; R&amp;D</a></li>
+            <li><a href="sustainability.html">ESG Sustainability</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="blog.html">News &amp; Blog</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <main class="app-viewport">
+        <section class="section-block" style="padding-top:60px;">
+            <div class="container">
+                <div class="contact-layout">
+                    <div class="gsap-reveal">
+                        <div class="badge-kicker">Get Started</div>
+                        <h1 class="section-title">Let's Put Your <span class="gold-gradient-text">Roof</span> to Work</h1>
+                        <p class="section-subtitle">Request a free engineer site audit. We will deliver a full 3D layout, DISCOM clearance roadmap &amp; ROI report in 48 hours.</p>
+
+                        <div style="margin-top:36px; display:flex; flex-direction:column; gap:22px;">
+                            <div style="display:flex; align-items:center; gap:16px;">
+                                <div style="width:48px; height:48px; border-radius:50%; background:rgba(244,168,53,0.12); color:var(--gold); display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">📞</div>
+                                <div>
+                                    <div style="font-size:0.85rem; color:rgba(255,255,255,0.6);">Call Toll-Free (India)</div>
+                                    <a href="tel:1800123456" style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.2rem; color:#fff;">1800-123-456</a>
+                                </div>
+                            </div>
+
+                            <div style="display:flex; align-items:center; gap:16px;">
+                                <div style="width:48px; height:48px; border-radius:50%; background:rgba(244,168,53,0.12); color:var(--gold); display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">✉️</div>
+                                <div>
+                                    <div style="font-size:0.85rem; color:rgba(255,255,255,0.6);">Direct Email</div>
+                                    <a href="mailto:hello@solarnova.in" style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.1rem; color:#fff;">hello@solarnova.in</a>
+                                </div>
+                            </div>
+
+                            <div style="display:flex; align-items:center; gap:16px;">
+                                <div style="width:48px; height:48px; border-radius:50%; background:rgba(244,168,53,0.12); color:var(--gold); display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">🏢</div>
+                                <div>
+                                    <div style="font-size:0.85rem; color:rgba(255,255,255,0.6);">Corporate HQ</div>
+                                    <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:0.95rem; color:#fff;">Baner Business Bay, Pune, MH - 411045</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card gsap-reveal">
+                        <h3 style="font-size:1.35rem; font-weight:700; color:#fff; margin-bottom:18px;">Request Free Site Audit</h3>
+                        <form id="contact-form" onsubmit="event.preventDefault(); alert('Thank you! A SolarNova engineer will contact you within 24 hours.');">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" class="form-control" placeholder="e.g. Rajesh Sharma" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" class="form-control" placeholder="+91 98765 43210" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>City &amp; Pincode</label>
+                                <input type="text" class="form-control" placeholder="e.g. Pune - 411001" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Approx. Monthly Bill</label>
+                                <select class="form-control">
+                                    <option>Below ₹3,000 / month</option>
+                                    <option selected>₹3,000 - ₹8,000 / month</option>
+                                    <option>₹8,000 - ₹20,000 / month</option>
+                                    <option>Above ₹20,000 / month (Commercial/Industrial)</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn-primary" style="width:100%; justify-content:center; margin-top:10px;">
+                                Submit Audit Request &rarr;
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FULL MEGA FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="brand-logo" style="margin-bottom:16px;">
+                        <span class="brand-icon"></span> SOLARNOVA
+                    </a>
+                    <p style="max-width:320px; line-height:1.6;">SolarNova Energy Pvt. Ltd. is India's leading EPC providing rooftop and megawatt-scale solar solutions engineered for maximum financial return and 25-year reliability.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About SolarNova</a></li>
+                        <li><a href="services.html">EPC Services</a></li>
+                        <li><a href="products.html">Solar Hardware</a></li>
+                        <li><a href="projects.html">Project Portfolio</a></li>
+                        <li><a href="case-studies.html">ROI Case Studies</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Solar Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="residential.html">Home Rooftop Solar</a></li>
+                        <li><a href="commercial.html">Commercial Rooftops</a></li>
+                        <li><a href="industrial.html">Industrial Open Access</a></li>
+                        <li><a href="technology.html">Smart Monitoring</a></li>
+                        <li><a href="sustainability.html">ESG &amp; CO2 Offset</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Corporate HQ</h4>
+                    <p style="margin-bottom:8px;">Baner Business Bay, Pune, MH - 411045</p>
+                    <p style="margin-bottom:8px;">Toll-Free: <a href="tel:1800123456" style="color:var(--gold-bright);">1800-123-456</a></p>
+                    <p>Email: <a href="mailto:hello@solarnova.in" style="color:var(--gold-bright);">hello@solarnova.in</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 SolarNova Energy Pvt. Ltd. All rights reserved.</span>
+                <span>MNRE Empanelled · ISO 9001:2015 Certified</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
